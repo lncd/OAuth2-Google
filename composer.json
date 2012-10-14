@@ -1,0 +1,37 @@
+{
+	"name": "lncd/oauth2-google",
+	"description": "OAuth 2.0 Client for Google",
+	"version": "1.0.1",
+	"homepage": "https://github.com/lncd/OAuth2-Google",
+	"license": "MIT",
+	"require": {
+		"php": ">=5.3.0",
+		"lncd/Oauth2": "*"
+	},
+	"repositories": [
+		{
+			"type": "git",
+			"url": "https://github.com/lncd/OAuth2"
+		}
+	],
+	"keywords": [
+		"oauth",
+		"oauth2",
+		"client",
+		"google",
+		"plus"
+	],
+	"authors": [
+		{
+			"name": "Alex Bilbie",
+			"email": "hello@alexbilbie.com",
+			"homepage": "http://www.httpster.org",
+			"role": "Developer"
+		}
+	],
+	"autoload": {
+		"psr-0": {
+			"GoogleIDP": "src/"
+		}
+	}
+}
