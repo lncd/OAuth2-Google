@@ -21,6 +21,8 @@ class Google extends \Oauth2\Client\IDP {
         'https://www.googleapis.com/auth/userinfo.email'
     );
 
+    public $scopeSeperator = ' ';
+
     public function urlAuthorize()
     {
         return 'https://accounts.google.com/o/oauth2/auth';
