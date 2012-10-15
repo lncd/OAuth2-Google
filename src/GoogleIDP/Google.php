@@ -21,6 +21,8 @@ class Google extends \Oauth2\Client\IDP {
         'https://www.googleapis.com/auth/userinfo.email'
     );
 
+    public $scopeSeperator = ' ';
+
     public function urlAuthorize()
     {
         return 'https://accounts.google.com/o/oauth2/auth';
@@ -41,14 +43,14 @@ class Google extends \Oauth2\Client\IDP {
     public function userDetails($response, \Oauth2\Client\Token\Access $token)
     {
         return array(
-            'uid' => $response['id'],
-            'nickname' => url_title($response['name'], '_', true),
-            'name' => $response['name'],
-            'first_name' => $response['given_name'],
-            'last_name' => $response['family_name'],
-            'email' => $response['email'],
+            'uid' => $response->id,
+            'nickname' => $response->name,
+            'name' => $response->name,
+            'first_name' => $response->given_name,
+            'last_name' => $response->family_name,
+            'email' => $response->email,
             'location' => null,
-            'image' => (isset($response['picture'])) ? $response['picture'] : null,
+            'image' => (isset($response->picture)) ? $response->picture : null,
             'description' => null,
             'urls' => array(),
         );
