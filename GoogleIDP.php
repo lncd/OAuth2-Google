@@ -12,9 +12,8 @@
  * @copyright  (c) 2012 University of Lincoln
  * @license    http://opensource.org/licenses/mit-license.php
  */
-namespace GoogleIDP;
 
-class Google extends \Oauth2\Client\IDP {
+class GoogleIDP extends \Oauth2\Client\IDP {
 
     public $scope = array(
         'https://www.googleapis.com/auth/userinfo.profile',
