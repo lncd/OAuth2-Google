@@ -1,7 +1,7 @@
 {
 	"name": "lncd/oauth2-google",
 	"description": "OAuth 2.0 Client for Google",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"homepage": "https://github.com/lncd/OAuth2-Google",
 	"license": "MIT",
 	"require": {
@@ -30,8 +30,6 @@
 		}
 	],
 	"autoload": {
-		"psr-0": {
-			"GoogleIDP": "src/"
-		}
+		"classmap": ["GoogleIDP.php"]
 	}
 }
